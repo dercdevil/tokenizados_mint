@@ -3,12 +3,12 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createConfig, http, WagmiProvider } from "wagmi";
 import { injected, metaMask, walletConnect } from "wagmi/connectors";
-import { sepolia } from "wagmi/chains";
+import { bsc, bscTestnet } from "wagmi/chains";
 import { useState } from "react";
 
-// 📌 Configuración wagmi (ejemplo: Sepolia)
+// 📌 Configuración wagmi para BSC (Binance Smart Chain)
 const config = createConfig({
-  chains: [sepolia],
+  chains: [bsc, bscTestnet],
   connectors: [
     metaMask(),
     injected(),
@@ -17,7 +17,8 @@ const config = createConfig({
     }),
   ],
   transports: {
-    [sepolia.id]: http(),
+    [bsc.id]: http(),
+    [bscTestnet.id]: http(),
   },
   ssr: false,
 });

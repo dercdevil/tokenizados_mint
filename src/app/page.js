@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useAccount, useConnect, useDisconnect, useWriteContract } from "wagmi";
 
 // 📌 Dirección y ABI del contrato NFT
-const CONTRACT_ADDRESS = "0xe248f72bf84233d58b3b54a274950a3fac269d0c";
+const CONTRACT_ADDRESS = "0x5CA48aaA07FB4244A7C94966210343F2883a2236";
 const CONTRACT_ABI = [
   {
     inputs: [{ internalType: "address", name: "to", type: "address" }],
@@ -157,12 +157,12 @@ function MintComponent() {
                   Transacción exitosa. Revisa si recibiste recompensas.
                 </p>
                 <a
-                  href={`https://sepolia.etherscan.io/tx/${txHash}`}
+                  href={`https://bscscan.com/tx/${txHash}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-teal-600 hover:text-teal-800 text-sm font-medium"
                 >
-                  Ver en Etherscan →
+                  Ver en BSCScan →
                 </a>
               </div>
             )}
