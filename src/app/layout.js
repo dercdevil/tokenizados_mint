@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Mint Token App",
-  description: "App para mintear tokens bonus",
+  title: "Tokenizados NFT - Mint Bonus NFT",
+  description:
+    "Mintea NFTs únicos con recompensas automáticas en tokens. Explora el mundo de la tokenización y blockchain con Tokenizados.",
 };
 
 export default function RootLayout({ children }) {
